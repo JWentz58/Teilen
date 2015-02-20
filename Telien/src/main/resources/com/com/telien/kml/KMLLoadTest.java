@@ -7,7 +7,8 @@ public class KMLLoadTest {
 		KMLLoader loader = new KMLLoader(filePath);
 		String output = loader.loadFileFromDisk();
 		System.out.println(output);
-
+		KMLParser parser = new KMLParser(output);
+		parser.loadPoints();
 	}
 
 }
