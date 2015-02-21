@@ -25,7 +25,9 @@ public class KMLParser {
 	
 	public void loadPoints(){
 		this.kml = Kml.unmarshal(kmlContent);
+		System.out.println("KML FILE:"+kml.toString());
 		Feature feature = kml.getFeature();
+		System.out.println("Feature:"+feature.toString());
 		parseFeature(feature);
 	}
 	
